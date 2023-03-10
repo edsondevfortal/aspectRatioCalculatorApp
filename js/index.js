@@ -1,11 +1,21 @@
 const updateWidth = (ratioWidth, ratioHeight, height, width) => () => {
-  const aspectRatio = ratioWidth.value / ratioHeight.value;
-  width.value = parseFloat((height.value * aspectRatio).toFixed(2));
+  try {
+    const aspectRatio = ratioWidth.value / ratioHeight.value;
+    width.value = parseFloat((height.value * aspectRatio).toFixed(2));
+  } catch (error) {
+    console.error(error);
+    // Handle the error in an appropriate way, e.g., display a message to the user
+  }
 };
 
 const updateHeight = (ratioWidth, ratioHeight, height, width) => () => {
-  const aspectRatio = ratioWidth.value / ratioHeight.value;
-  height.value = parseFloat((width.value / aspectRatio).toFixed(2));
+  try {
+    const aspectRatio = ratioWidth.value / ratioHeight.value;
+    height.value = parseFloat((width.value / aspectRatio).toFixed(2));
+  } catch (error) {
+    console.error(error);
+    // Handle the error in an appropriate way, e.g., display a message to the user
+  }
 };
 
 const ratioWidth = document.getElementById("ratio-width");
