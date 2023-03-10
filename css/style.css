@@ -91,7 +91,23 @@ label {
   font-size: 1em;
 }
 
-.error-container {
+.error-container-width {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: var(--error-color);
+  background-color: var(--error-background-color);
+  border-radius: 5px;
+  transition: auto;
+}
+
+.error-container-width::before {
+  content: "⚠️";
+  margin-right: 10px;
+  font-size: 1em;
+}
+
+.error-container-height {
   display: flex;
   align-items: center;
   padding: 10px;
@@ -102,7 +118,7 @@ label {
   margin-bottom: 2em;
 }
 
-.error-container::before {
+.error-container-height::before {
   content: "⚠️";
   margin-right: 10px;
   font-size: 1em;
